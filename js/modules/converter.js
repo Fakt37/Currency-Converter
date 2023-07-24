@@ -18,8 +18,9 @@ const createSelect = async (id, data) => {
     return select;
 };
 
+
 const createCurrencyInput = (labelText, select, oppositeSelect, data) => {
-    let amountInputFrom; // Объявляем переменную amountInputFrom здесь
+    let amountInputFrom = null;
 
     const currencyInput = document.createElement('div');
     currencyInput.classList.add(`converter__${select.id}`, 'currency-input');

@@ -5,6 +5,7 @@
     --black: #000;
     --gray: #777F85;
     --border-gray: #C0CAD6;
+    --bg-table-head: #F2F5F5;
     --select-bg-color: #287EA2;
     --white: #fff;
 }
@@ -44,6 +45,11 @@ input[type="number"] {
     -moz-appearance: textfield;
 }
 
+.main {
+    padding-top: 116px;
+    padding-bottom: 162px;
+}
+
 .container {
     margin: 0 auto;
     max-width: 940px;
@@ -51,8 +57,7 @@ input[type="number"] {
 
 /* section converter */
 .converter {
-    padding-top: 116px;
-    padding-bottom: 62px;
+    margin-bottom: 62px;
 }
 
 .converter__title {
@@ -175,4 +180,101 @@ input[type="number"] {
 .converter__swap-icon {
     width: 50px;
     height: 55px;
+}
+
+.currency-rates__title {
+    margin: 0;
+    margin-bottom: 40px;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20.571px;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.currency-rates__table-container {
+    border: 1px solid var(--border-gray);
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    overflow: hidden;
+}
+
+.table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+.table__head {
+    position: relative;
+    background: var(--bg-table-head);
+}
+
+.table__head::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 1px;
+    background: var(--border-gray);
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.table__head-tr,
+.table__body-tr {
+    display: flex;
+    column-gap: 20px;
+}
+
+.table__head-th {
+    padding: 22px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+    text-align: left;
+    color: var(--black);
+}
+
+.table__head-tr th:nth-child(1),
+.table__head-tr th:nth-child(2),
+.table__body-tr td:nth-child(1),
+.table__body-tr td:nth-child(2) {
+    width: 118px;
+}
+
+.table__head-tr th:nth-child(3),
+.table__head-tr th:nth-child(4),
+.table__body-tr td:nth-child(3),
+.table__body-tr td:nth-child(4) {
+    width: 298px;
+}
+
+.table__body {
+    background-color: var(--white);
+}
+
+.table__body-tr:not(:last-child) {
+    border-bottom: 1px solid var(--border-gray);
+}
+
+.table__body-td {
+    padding: 24px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.table__body-code-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.table__icon {
+    width: 27px;
+    height: 20px;
 }
