@@ -3,6 +3,24 @@
     <path d="M37.0808 53.2747C37.3261 53.52 37.6429 53.6426 37.97 53.6426C38.297 53.6426 38.6139 53.52 38.8592 53.2747L48.5178 43.6161C49.0084 43.1255 49.0084 42.3385 48.5178 41.8479L38.8592 32.1892C38.3686 31.6986 37.5816 31.6986 37.091 32.1892C36.6004 32.6798 36.6004 33.4668 37.091 33.9574L44.6135 41.4799H1.79867C1.10366 41.4799 0.541519 42.0421 0.541519 42.7371C0.541519 43.4321 1.10366 43.9942 1.79867 43.9942H44.6033L37.0808 51.5065C36.5902 51.9971 36.5902 52.7943 37.0808 53.2747Z" fill="black"/>
     <path d="M10.5783 2.36795L0.91969 12.0266C0.429093 12.5172 0.429093 13.3042 0.91969 13.7948L10.5783 23.4534C10.8236 23.6987 11.1405 23.8213 11.4675 23.8213C11.7946 23.8213 12.1114 23.6987 12.3567 23.4534C12.8473 22.9628 12.8473 22.1758 12.3567 21.6852L4.83424 14.1627H47.6388C48.3338 14.1627 48.896 13.6006 48.896 12.9056C48.896 12.2105 48.3338 11.6484 47.6388 11.6484H4.82402L12.3465 4.13614C12.8371 3.64554 12.8371 2.85854 12.3465 2.36795C11.8559 1.87735 11.0587 1.87735 10.5783 2.36795Z" fill="black"/>
   </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 114" id="swap-icon-mobile">
+    <g filter="url(#filter0_d_204_8069)">
+      <circle cx="57" cy="52" r="44" fill="white"></circle>
+    </g>
+    <path d="M47.4385 55.6846L39.2625 48.0523L31.3996 56.4752M66.5599 48.3138L74.7358 55.9461L82.5987 47.5232M49.584 35.6287C52.683 34.1473 56.109 33.5547 59.4726 33.9182C62.8362 34.2818 66.0025 35.587 68.6117 37.6855C71.2208 39.7839 73.1683 42.5915 74.2327 45.7891C75.2971 48.9868 75.4358 52.4462 74.633 55.7744M64.416 68.3712C61.3168 69.8533 57.8904 70.4463 54.5263 70.0829C51.1623 69.7195 47.9955 68.4142 45.386 66.3155C42.7765 64.2167 40.8289 61.4087 39.7646 58.2106C38.7003 55.0124 38.562 51.5525 39.3654 48.224" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    <defs>
+      <filter id="filter0_d_204_8069" x="0" y="0" width="114" height="114" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
+        <feOffset dy="5"></feOffset>
+        <feGaussianBlur stdDeviation="6.5"></feGaussianBlur>
+        <feComposite in2="hardAlpha" operator="out"></feComposite>
+        <feColorMatrix type="matrix" values="0 0 0 0 0.752941 0 0 0 0 0.792157 0 0 0 0 0.839216 0 0 0 0.5 0"></feColorMatrix>
+        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_204_8069"></feBlend>
+        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_204_8069" result="shape"></feBlend>
+      </filter>
+    </defs>
+  </symbol>
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 20" id="AUD">
     <g clip-path="url(#clip0_202_31)">
       <path d="M0 0H27V20H0V0Z" fill="#000066"></path>

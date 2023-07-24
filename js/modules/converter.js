@@ -8,15 +8,24 @@ const createSelect = async (id, data) => {
     select.classList.add('currency-input__select');
     select.id = id;
 
+    const setOptionText = (currencyCode) => {
+        if (window.matchMedia('(max-width: 768px)').matches) {
+            return data.Valute[currencyCode].CharCode;
+        } else {
+            return `${data.Valute[currencyCode].Name} ${data.Valute[currencyCode].CharCode}`;
+        }
+    };
+
     for (let currencyCode in data.Valute) {
-        const option = document.createElement("option");
+        const option = document.createElement('option');
         option.value = currencyCode;
-        option.text = `${data.Valute[currencyCode].Name} ${data.Valute[currencyCode].CharCode}`;
+        option.text = setOptionText(currencyCode);
         select.appendChild(option);
     }
 
     return select;
 };
+
 
 
 const createCurrencyInput = (labelText, select, oppositeSelect, data) => {
@@ -41,21 +50,18 @@ const createCurrencyInput = (labelText, select, oppositeSelect, data) => {
     amountInput.id = amountInputId;
 
     if (amountInputId === 'amount_to') {
-        amountInput.readOnly = true; // Устанавливаем readonly для amountInput с id "amount_to"
+        amountInput.readOnly = true;
     } else {
         amountInput.addEventListener('input', () => {
             const fromAmount = amountInput.value;
             const fromCurrency = select.value;
             const toCurrency = oppositeSelect.value;
 
-            // Получение курса валют из данных
             const exchangeRateFrom = data.Valute[fromCurrency].Value;
             const exchangeRateTo = data.Valute[toCurrency].Value;
 
-            // Расчет конверсии
             const result = (fromAmount * exchangeRateFrom) / exchangeRateTo;
 
-            // Отображение результата в amountInputTo
             const amountInputTo = document.getElementById('amount_to');
             amountInputTo.value = result.toFixed(2);
         });
@@ -115,28 +121,21 @@ const createConverterWrapper = async (data) => {
     return converterWrapper;
 };
 
-
-
-const performConversion = (amountInputFrom, amountInputTo, data) => {
-    const fromAmount = amountInputFrom.querySelector('input').value;
-    const fromCurrency = amountInputFrom.querySelector('select').value;
-    const toCurrency = amountInputTo.querySelector('select').value;
-
-    const exchangeRateFrom = data.Valute[fromCurrency].Value;
-    const exchangeRateTo = data.Valute[toCurrency].Value;
-
-    const result = (fromAmount * exchangeRateFrom) / exchangeRateTo;
-
-    amountInputTo.querySelector('input').value = result.toFixed(2);
-};
-
 const createSwapButton = () => {
     const swapButton = document.createElement('button');
     swapButton.classList.add('converter__swap-btn');
 
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     svg.classList.add('converter__swap-icon');
-    svg.innerHTML = `<use xlink:href="img/sprite.svg#swap-icon"></use>`;
+
+    const updateIcon = () => {
+        const isMobile = window.matchMedia('(max-width: 1024px)').matches;
+        svg.innerHTML = `<use xlink:href="img/sprite.svg#${isMobile ? 'swap-icon-mobile' : 'swap-icon'}"></use>`;
+    };
+
+    updateIcon();
+
+    window.addEventListener('resize', updateIcon);
 
     swapButton.append(svg);
 
